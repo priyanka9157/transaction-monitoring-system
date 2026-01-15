@@ -21,5 +21,6 @@ public class TransactionController {
     @GetMapping("/user/{userId}")
     public List<Transaction> getByUserId(@PathVariable Long userId){
         return transactionService.getByUserId(userId);
+
     }
 }
