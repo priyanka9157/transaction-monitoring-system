@@ -8,7 +8,7 @@ public class TransactionServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TransactionServiceApplication.class, args);
-		System.out.println("helloo");
+		System.out.println("transaction service");
 	}
 
 }

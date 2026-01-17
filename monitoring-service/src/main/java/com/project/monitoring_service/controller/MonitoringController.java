@@ -19,4 +19,11 @@ public class MonitoringController {
         monitoringService.monitor(transactionDTO);
         return "Monitoring completed";
     }
+
+    @PostMapping("/analyze")
+    public String analyze(@RequestBody TransactionDTO transaction) {
+        monitoringService.analyzeTransaction(transaction);
+        return "Transaction analyzed";
+    }
+
 }
