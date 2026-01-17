@@ -14,7 +14,7 @@ public class AlertService {
     private AlertRepository alertRepository;
 
     public Alert createAlert(Alert alert){
-        alert.setStatus("Open");
+        alert.setStatus("OPEN");
         alert.setCreatedAt(LocalDateTime.now());
         return alertRepository.save(alert);
     }

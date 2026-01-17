@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(
-        name = "alert-service",
-        url = "http://localhost:8083"
+        name = "alert-service"
+//        , url = "http://localhost:8083"
 )
 public interface AlertClient {
 

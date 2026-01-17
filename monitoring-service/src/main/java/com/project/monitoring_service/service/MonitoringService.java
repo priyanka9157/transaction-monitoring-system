@@ -51,7 +51,7 @@ public class MonitoringService {
 
     private int calculateRisk(TransactionDTO transactionDTO) {
         BigDecimal highAmount = new BigDecimal("50000");
-        if(transactionDTO.getAmount().compareTo(highAmount) > 0) 
+        if(transactionDTO.getAmount().compareTo(highAmount) > 0)
         {
             return 85;
         }
