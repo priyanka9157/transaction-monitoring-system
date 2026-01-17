@@ -13,12 +13,12 @@ public class AlertController {
     @Autowired
     private AlertService alertService;
 
-    @PostMapping
+    @PostMapping("/createalert")
     public Alert createAlert(@RequestBody Alert alert){
         return alertService.createAlert(alert);
     }
 
-    @GetMapping
+    @GetMapping("/getallalerts")
     public List<Alert> getAlerts(){
         return alertService.getAllAlert();
     }
