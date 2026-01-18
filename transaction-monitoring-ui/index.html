@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="transactionApp">
+<head>
+    <title>Transaction Monitoring System</title>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <!-- App -->
+    <script src="app.js"></script>
+
+    <!-- Services -->
+    <script src="services/transactionService.js"></script>
+    <script src="services/monitoringService.js"></script>
+    <script src="services/alertService.js"></script>
+
+    <!-- Controllers -->
+    <script src="controllers/transactionController.js"></script>
+    <script src="controllers/monitoringController.js"></script>
+    <script src="controllers/alertController.js"></script>
+</head>
+
+<body>
+<h2>💳 Transaction Monitoring System</h2>
+
+<nav>
+    <a href="#!/transactions">Transactions</a> |
+    <a href="#!/monitoring">Monitoring</a> |
+    <a href="#!/alerts">Alerts</a>
+</nav>
+
+<hr>
+
+<div ng-view></div>
+</body>
+</html>
