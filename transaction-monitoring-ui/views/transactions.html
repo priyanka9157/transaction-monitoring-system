@@ -1,22 +1,31 @@
-<h3>Transactions</h3>
+<h4 class="mb-3">Transactions</h4>
 
-<form ng-submit="createTransaction()">
-    Amount: <input type="number" ng-model="newTransaction.amount" required />
-    Type: <input type="text" ng-model="newTransaction.type" required />
-    <button type="submit">Create</button>
-</form>
-
-<hr>
-
-<table border="1">
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
     <tr>
         <th>ID</th>
         <th>Amount</th>
         <th>Type</th>
+        <th>Status</th>
     </tr>
-    <tr ng-repeat="tx in transactions">
-        <td>{{tx.id}}</td>
-        <td>{{tx.amount}}</td>
-        <td>{{tx.type}}</td>
+    </thead>
+
+    <tbody>
+    <!-- <tr ng-repeat="t in transactions">
+        <td>{{t.id}}</td>
+        <td>{{t.amount}}</td>
+        <td>{{t.type}}</td>
+        <td>
+            <span class="badge bg-success" ng-if="t.status=='SUCCESS'">SUCCESS</span>
+            <span class="badge bg-danger" ng-if="t.status!='SUCCESS'">FAILED</span>
+        </td>
+    </tr> -->
+
+    <tr>
+         <td>1</td>
+        <td>10000</td>
+        <td>OPEN</td>
+        <td>SUCCESS</td>
     </tr>
+    </tbody>
 </table>

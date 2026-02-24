@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:5500")
 @RestController
 @RequestMapping("/api/transactions")
 public class TransactionController {
@@ -15,6 +15,7 @@ public class TransactionController {
 
     @PostMapping("/create")
     public Transaction create(@RequestBody Transaction transaction){
+        transaction.setUserId(1L);
         return transactionService.save(transaction);
     }
 

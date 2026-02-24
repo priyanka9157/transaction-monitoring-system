@@ -1,14 +1,18 @@
-<h3>Monitoring Dashboard</h3>
+<h3 class="mb-3">Monitoring Dashboard</h3>
 
-<table border="1">
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
     <tr>
         <th>Transaction ID</th>
         <th>Risk Score</th>
         <th>Flag</th>
     </tr>
+    </thead>
+    <tbody>
     <tr ng-repeat="m in monitored">
         <td>{{m.transactionId}}</td>
         <td>{{m.riskScore}}</td>
         <td>{{m.flag}}</td>
     </tr>
+    </tbody>
 </table>

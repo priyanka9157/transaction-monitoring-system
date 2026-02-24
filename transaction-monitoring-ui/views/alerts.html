@@ -1,6 +1,7 @@
-<h3>Alerts</h3>
+<h3 class="mb-3">Alerts</h3>
 
-<table border="1">
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
     <tr>
         <th>ID</th>
         <th>Transaction ID</th>
@@ -8,6 +9,8 @@
         <th>Status</th>
         <th>Created At</th>
     </tr>
+    </thead>
+    <tbody>
     <tr ng-repeat="a in alerts">
         <td>{{a.id}}</td>
         <td>{{a.transactionId}}</td>
@@ -15,4 +18,5 @@
         <td>{{a.status}}</td>
         <td>{{a.createdAt}}</td>
     </tr>
+    </tbody>
 </table>

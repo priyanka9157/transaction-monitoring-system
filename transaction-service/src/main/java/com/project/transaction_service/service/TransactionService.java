@@ -6,6 +6,7 @@ import com.project.transaction_service.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -15,6 +16,7 @@ public class TransactionService {
     private TransactionRepository transactionRepository;
 
     public Transaction save(Transaction transaction){
+        transaction.setCreatedAt(LocalDateTime.now());
         return transactionRepository.save(transaction);
     }
 
